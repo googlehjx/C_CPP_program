@@ -64,10 +64,15 @@ void myList::deleteList(Node* head) {
 	return;
 }
 
-Node* myList::reverAuz(Node* cur) {
-	if (cur->p_Next == nullptr)return cur;
-	Node* t = cur;
-	cur->p_Next->p_Next = cur;
-	cur->p_Next = nullptr;
-	return reverAuz(t->p_Next);
+Node* myList::reverAuz(Node* cur) {  // �ݹ鷨
+	Node* t;
+	if (cur->p_Next != nullptr) {
+		t = reverAuz(cur->p_Next);
+		cur->p_Next->p_Next = cur;
+		cur->p_Next = nullptr;
+		return t;
+	}
+	else
+		return cur;
+
 }
