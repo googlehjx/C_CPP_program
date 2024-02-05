@@ -7,6 +7,7 @@ myList::myList() {
 }
 myList::~myList() {
 	deleteList(head);
+	head == nullptr;
 }
 
 int myList::lenOfList() {
@@ -79,5 +80,7 @@ Node* myList::reverAuz(Node* cur) {  // �ݹ鷨
 	}
 	else
 		return cur;
-
+}
+bool myList::isEmpyt() {
+	return lenOfList() == 0;
 }
