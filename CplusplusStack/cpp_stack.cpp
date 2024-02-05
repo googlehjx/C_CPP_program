@@ -37,5 +37,5 @@ char Stack::pop() {
 		return data[top];
 	}
 	std::cout << " the Stack is empty." << std::endl;
-	return '\n';
+	return '\0';
 }
