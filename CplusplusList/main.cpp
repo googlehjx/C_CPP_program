@@ -12,9 +12,14 @@ int main() {
 	ms.reversList();
 	ms.traverseList();
 
-	while (ms.lenOfList() != 0) {
-		cout << ms.popNumber() << " ";
-	}
+	//while (ms.lenOfList() != 0) {
+	//	cout << ms.popNumber() << " ";
+	//}
 	cout << endl;
 	cout << "Now the length = " << ms.lenOfList() << endl;
+	ms.emptyList();
+	cout << "Now the length = " << ms.lenOfList() << endl;
+	cout << "======" << endl;
+	ms.traverseList();
+	cout << "======" << endl;
 }

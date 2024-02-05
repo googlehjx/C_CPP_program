@@ -16,6 +16,8 @@ public:
 	int popNumber();
 	void traverseList();
 	void reversList();
+	void emptyList();
+	
 private:
 	Node* head;
 	void deleteList(Node*);

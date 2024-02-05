@@ -53,6 +53,11 @@ void myList::reversList() {
 	}
 }
 
+void myList::emptyList() {
+	delete(head->p_Next);
+	head->p_Next = nullptr;
+}
+
 void myList::deleteList(Node* head) {
 	if (head == nullptr)return;
 	Node* t=nullptr;
