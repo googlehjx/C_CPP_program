@@ -3,9 +3,11 @@
 #include "myList.h"
 
 myList::myList() {
+	std::cout << "myList constructor" << std::endl;
 	head = new Node{ 0, nullptr };
 }
 myList::~myList() {
+	std::cout << "myList deconstructor" << std::endl;
 	deleteList(head);
 	head == nullptr;
 }
@@ -71,15 +73,13 @@ void myList::deleteList(Node* head) {
 }
 
 Node* myList::reverAuz(Node* cur) {  // �ݹ鷨
-	Node* t;
+	Node* t = cur;
 	if (cur->p_Next != nullptr) {
 		t = reverAuz(cur->p_Next);
 		cur->p_Next->p_Next = cur;
 		cur->p_Next = nullptr;
-		return t;
 	}
-	else
-		return cur;
+	return t;
 }
 bool myList::isEmpyt() {
 	return lenOfList() == 0;
