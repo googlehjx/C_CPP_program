@@ -23,6 +23,12 @@ myString::myString(const char* p) {
 	std::cout << "myString constructor with parameter" << std::endl;
 }
 
+myString::myString(const myString& m) {
+	_str = new char[strlen(m._str)+1];
+	strcpy(_str, m._str); 
+	std::cout << "copy constructor" << std::endl;
+
+}
 myString::~myString() {
 	std::cout << "myString deconstructor" << std::endl;
 	delete[]_str;
