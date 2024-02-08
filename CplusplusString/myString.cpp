@@ -46,3 +46,9 @@ void myString::print() {
 	std::cout << _str << std::endl;
 }
 
+myString& myString::operator=(const myString& m) {
+	_length = m._length;
+	_str = new char[_length];
+	strcpy(_str, m._str);
+	return *this;
+}
