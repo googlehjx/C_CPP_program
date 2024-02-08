@@ -12,6 +12,7 @@ public:
 
 	~myString();
 	int LenOfString();
+	void print();
 
 private:
 	char* _str;
