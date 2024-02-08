@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cstring>
 #include "myString.h"
 
 using namespace std;
@@ -12,5 +12,8 @@ int main() {
 	ms1.print();
 	myString ms2(ms1);
 	ms2.print();
+
+	cout << "===============" << endl;
+
 	return 0;
 }

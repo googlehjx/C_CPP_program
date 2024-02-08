@@ -11,12 +11,13 @@ myString::myString() {
 }
 
 myString::myString(const char* p) {
-	int len = strlen(p);
+	int len=0;
 	if (p == nullptr) {
 		_str = new char[1];
 		*_str = '\0';
 	}
 	else {
+		len = strlen(p);
 		_str = new char[len + 1];
 		strcpy(_str, p);
 	}
@@ -26,7 +27,7 @@ myString::myString(const char* p) {
 }
 
 myString::myString(const myString& m) {
-	_str = new char[strlen(m._str)+1];
+	_str = new char[m._length];
 	strcpy(_str, m._str); 
 	_length = m._length;
 	std::cout << "copy constructor" << std::endl;
