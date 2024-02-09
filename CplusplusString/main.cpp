@@ -21,6 +21,7 @@ int main() {
 	ms = ms1 + ms2;
 	ms.print();
 	ms1.print();
+	cout << ms << endl;
 
 	return 0;
 }

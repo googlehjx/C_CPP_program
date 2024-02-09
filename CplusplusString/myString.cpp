@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <cstring>
 #include "myString.h"
+using namespace std;
 
 myString::myString() {
 	_str = new char[1];
@@ -61,4 +62,9 @@ myString myString::operator+(const myString& m) {
 	strcpy(ms._str, this->_str);
 	strcpy(ms._str + this->_length - 1, m._str);
 	return ms;
+}
+
+ostream& operator<<(ostream& out, const myString& m) {
+	out << m._str;
+	return out;
 }

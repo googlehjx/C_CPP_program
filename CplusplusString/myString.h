@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+using namespace std;
 class myString {
 public:
 	// 默认构造函数
@@ -9,8 +11,10 @@ public:
 	myString(const myString&);
 	// 赋值运算符重载
 	myString& operator=(const myString& m);
-
+	// 加号运算符重载
 	myString operator+(const myString& m);
+	// 输出<<运算符重载
+	friend ostream& operator<<(ostream& out, const myString& m);
 
 
 	~myString();
