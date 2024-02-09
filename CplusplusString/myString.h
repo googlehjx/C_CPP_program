@@ -10,6 +10,8 @@ public:
 	// ¸³ÖµÔËËã·ûÖØÔØ
 	myString& operator=(const myString& m);
 
+	myString operator+(const myString& m);
+
 
 	~myString();
 	int LenOfString();

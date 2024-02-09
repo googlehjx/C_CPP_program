@@ -52,3 +52,13 @@ myString& myString::operator=(const myString& m) {
 	strcpy(_str, m._str);
 	return *this;
 }
+
+myString myString::operator+(const myString& m) {
+	myString ms;
+	int len = this->_length + m._length - 1;
+	ms._length = len;
+	ms._str = new char[len];
+	strcpy(ms._str, this->_str);
+	strcpy(ms._str + this->_length - 1, m._str);
+	return ms;
+}

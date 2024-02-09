@@ -18,5 +18,9 @@ int main() {
 
 	cout<<"==============="<<endl;
 
+	ms = ms1 + ms2;
+	ms.print();
+	ms1.print();
+
 	return 0;
 }
