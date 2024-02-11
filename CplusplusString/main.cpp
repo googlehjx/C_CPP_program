@@ -4,6 +4,7 @@
 
 using namespace std;
 int main() {
+#if 0
 	myString ms;   // default constructor
 	//cout << ms.LenOfString()<<endl;
 	myString ms1("china"); // constructor with parameter
@@ -21,6 +22,10 @@ int main() {
 	ms.print();
 	ms1.print();
 	cout << ms << endl;
+#endif
+	myString ms;
+	cin >> ms;
+	cout << ms;
 
 	return 0;
 }

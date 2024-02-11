@@ -11,10 +11,13 @@ public:
 	myString(const myString&);
 	// 赋值运算符重载
 	myString& operator=(const myString& m);
+	myString& operator=(const char* ps);
 	// 加号运算符重载
 	myString operator+(const myString& m);
 	// 输出<<运算符重载
 	friend ostream& operator<<(ostream& out, const myString& m);
+	// 输入>>运算符重载
+	friend istream& operator>>(istream& in, myString& m);
 
 
 	~myString();
