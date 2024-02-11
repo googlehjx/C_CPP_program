@@ -26,5 +26,11 @@
     <ClInclude Include="myString.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="文本.txt" />
   </ItemGroup>
 </Project>
