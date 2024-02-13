@@ -1,1 +1,12 @@
 容器：vector
+info:
+1、包含在std namespace下面
+2、底层是动态数组实现
+初始化：
+默认初始化，vector<int> vi; 此时vi.size() = vi.capacity() = 0;
+capacity是默认初始化函数分配的元素空间，size()表示的当前对象已使用的元素个数
+
+接口：
+size():返回当前对象包含的元素个数
+capacity():返回当前对象分配的空间 ≥ size()
+push_back: 在vector对象的数组尾部添加元素
