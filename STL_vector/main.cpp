@@ -15,9 +15,9 @@ int main() {
 	cout << "vi.capacity() = " << vi.capacity() << endl;
 	vi.push_back(4);
 	cout << "vi.capacity() = " << vi.capacity() << endl;
-	vi.clear();
+	//vi.clear();
 
-	cout << "====" << endl;
+	cout << "=====================================" << endl;
 	cout << "vi.size() = " << vi.size() << endl;
 	cout << "vi.capacity() = " << vi.capacity() << endl;
 	for (auto i = vi.begin(); i != vi.end(); i++) {
@@ -26,6 +26,8 @@ int main() {
 	cout << endl;
 	vector<int>::iterator it = vi.begin();
 	//cout << *it << endl;
+	cout << vi.front() << endl;
+	cout << vi.back() << endl;
 	
 	return 0;
 }
