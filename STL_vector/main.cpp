@@ -28,6 +28,10 @@ int main() {
 	//cout << *it << endl;
 	cout << vi.front() << endl;
 	cout << vi.back() << endl;
+	for (auto i : vi) {
+		cout << i << " ";
+	}
+	cout << endl;
 	
 	return 0;
 }

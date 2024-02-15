@@ -13,3 +13,8 @@ push_back(T element): 在vector对象的数组尾部添加元素
 clear(): 清除当前容器对象中包含的元素，这时迭代器失效，无法访问元素，此时size为0，capacity保持不变
 front/back: 返回最前面或最后面的元素值
 begin/end: 迭代器，表示初始和结束迭代器，end指向最后一个元素的后面那个位置
+
+迭代器声明方法：
+以vector<int>为例，循环显示vector<int> vi
+for( vector<int>::iterator it = vi.begin(); it!= vi.end(); it++){cout<<*it<<endl;}
+for(auto it :vi){cout<<it<<endl;}  // C++11
