@@ -33,6 +33,23 @@ int main() {
 		cout << i << " ";
 	}
 	cout << endl;
+	cout << "pop_back接口：" << endl;
+	vi.pop_back();   // 将vector末尾的元素丢弃
+
+	for (auto i : vi) {
+		cout << i << " ";
+	}
+
+	cout << endl;
+	vector<int>::iterator pt = vi.begin();
+
+	vi.erase(pt+1, pt+2);
+
+	for (auto i : vi) {
+		cout << i << " ";
+	}
+
+	cout << endl;
 	
 	return 0;
 }
