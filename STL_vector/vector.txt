@@ -18,3 +18,6 @@ begin/end: 迭代器，表示初始和结束迭代器，end指向最后一个元素的后面那个位置
 以vector<int>为例，循环显示vector<int> vi
 for( vector<int>::iterator it = vi.begin(); it!= vi.end(); it++){cout<<*it<<endl;}
 for(auto it :vi){cout<<it<<endl;}  // C++11
+
+vector如何实现动态扩展：
+

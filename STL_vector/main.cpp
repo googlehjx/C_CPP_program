@@ -28,6 +28,7 @@ int main() {
 	//cout << *it << endl;
 	cout << vi.front() << endl;
 	cout << vi.back() << endl;
+	cout << "C++11 新的迭代的方法：" << endl;
 	for (auto i : vi) {
 		cout << i << " ";
 	}
