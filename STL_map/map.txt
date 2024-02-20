@@ -42,8 +42,36 @@ private:
 
 }
 
-
+template<class K, class V>
 class map{
-	
+
+public:
+	struct MapKeyofT
+	{
+		const K& operator()(const pair<const K, V>& data)
+		{
+			return data.first;
+		}
+	};
+	typedef typename RBTree<K, pair<const K, V>, MapKeyofT>::iterator iterator;
+	iterator begin()
+	{
+		return _t.begin();
+	}
+	iterator end()
+	{
+		return _t.end();
+	}
+	pair<iterator, bool> insert(const pair<K, V>& data)
+	{
+		return _t.Insert(data);
+	}
+	V& operator[](const K& key)
+	{
+		pair<iterator, bool> ret = _t.Insert(make_pair(key, V()));
+		return ret.first->second;
+	}
+private:
+	RBTree<K, pair<K,V>, MapKeyofT> _tree;
 }
 
