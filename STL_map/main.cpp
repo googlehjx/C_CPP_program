@@ -2,6 +2,7 @@
 #include <map>
 
 using namespace std;
+typedef map<string, int> myMap;
 int main() {
 
 	// 构造map对象
@@ -31,8 +32,14 @@ int main() {
 	for (map<string, int>::iterator it = mp2.begin(); it != mp2.end(); it++) {
 		cout << it->first << " " << it->second << " " << endl;
 	}
+	cout << endl;
 
+	mp.insert(myMap::value_type("lucy", 600));
+	for (map<string, int>::iterator it = mp.begin(); it != mp.end(); it++) {
+		cout << it->first << " " << it->second << " " << endl;
+	}
 
-	
+	// mp.insert(pair<string, int>("abcd", 100));
+	// mp.insert(map<string, int>::value_type("abcd", 100));
 
 }
