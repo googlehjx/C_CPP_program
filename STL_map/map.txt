@@ -1,0 +1,49 @@
+std::map<key_type, mapped_type>
+value_type 与pair<key_type, mapped_type> 在构建map对象元素时作用相同
+
+对象构建：
+typedef map<string, int> myMap；
+myMap mp;
+
+接口：
+mp.insert(myMap::value_type("jim", 100));
+mp.insert(pair<string, int>("green", 99));
+
+mp内包含的元素是以key为比较对象进行排序的，内部以红黑树实现，插入value_type元素对过程中，不断调整树结构
+mp["hello"] = 98;也可以实现插入
+
+
+enum Color{
+	BLACK，
+	RED
+}；
+template<class K, class V>
+struct RBTreeNode{
+
+	typedef RBTreeNode<K, V> Node;
+	Node* left;
+	Node* right;
+	Node* parent;
+	pair<K, V> _kv;  
+	Color color;
+
+	RBTreeNode(pair<K,V> kv):
+		left(nullptr), right(nullptr), parent(nullptr), _kv(kv), color(RED)
+	{}
+}
+
+template<class K, class V>
+class RBTree{
+public:
+	RBTree():_root(nullptr)
+	{}
+private:
+	RBTreeNode* _root;
+
+}
+
+
+class map{
+	
+}
+
