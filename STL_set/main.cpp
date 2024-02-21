@@ -19,4 +19,19 @@ int main() {
 		cout << *i << " ";
 	}
 	cout << endl;
+
+	set<int>::iterator it = si.find(6);
+	if (it != si.end()) {
+		cout << *it << endl;
+		si.erase(it);
+	}
+	else {
+		cout << "No element" << endl;
+	}
+
+	
+	for (set<int>::const_iterator i = si.cbegin(); i != si.cend(); i++) {
+		cout << *i << " ";
+	}
+	cout << endl;
 }
