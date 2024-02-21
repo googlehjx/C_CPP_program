@@ -10,8 +10,8 @@ public:
 	// 拷贝构造函数  string my1("china"); string my2(my1)
 	myString(const myString&);
 	// 赋值运算符重载
-	myString& operator=(const myString& m);
-	myString& operator=(const char* ps);
+	const myString& operator=(const myString& m);
+	const myString& operator=(const char* ps);
 	// 加号运算符重载
 	myString operator+(const myString& m);
 	// 输出<<运算符重载

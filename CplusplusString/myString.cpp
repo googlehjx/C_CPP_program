@@ -47,7 +47,7 @@ void myString::print() {
 	std::cout << _str << std::endl;
 }
 
-myString& myString::operator=(const myString& m) {
+const myString& myString::operator=(const myString& m) {
 	if (this == &m)
 		return *this;
 	_length = m._length;
@@ -57,11 +57,11 @@ myString& myString::operator=(const myString& m) {
 	return *this;
 }
 
-myString& myString::operator=(const char* ps) {
+const myString& myString::operator=(const char* ps) {
 	int len = strlen(ps);
 	delete []_str;
 	_length = len;
-	_str = new char[len+1];	
+	_str = new char[len+1];
 	strcpy(_str, ps);
 	return *this;
 }
