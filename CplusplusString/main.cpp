@@ -4,8 +4,10 @@
 
 using namespace std;
 
-void func(myString a) {
-
+myString func(myString a) {
+	// 实参传递尽量时，调用拷贝构造函数
+	// 返回对象时，也要调用拷贝构造函数
+	return a;
 }
 int main() {
 
