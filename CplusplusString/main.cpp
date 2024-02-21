@@ -4,9 +4,9 @@
 
 using namespace std;
 
-myString func(myString a) {
-	// 实参传递尽量时，调用拷贝构造函数
-	// 返回对象时，也要调用拷贝构造函数
+myString func(myString &a /* myString a */) {
+	// 实参传递尽量时，调用拷贝构造函数；若形参为引用，则不要调用构造函数来生成临时对象，
+	// 但返回对象的话，还需要调用拷贝构造函数
 	return a;
 }
 int main() {
