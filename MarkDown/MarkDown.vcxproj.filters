@@ -15,17 +15,20 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\STL_map\README.md" />
+    <Image Include="fw_bp.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="heuristic.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Image.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\STL_map\fw_bp.gif">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\STL_map\heuristic.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\STL_map\Image.jpg">
-      <Filter>资源文件</Filter>
-    </Image>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="基本语法.md" />
   </ItemGroup>
 </Project>
