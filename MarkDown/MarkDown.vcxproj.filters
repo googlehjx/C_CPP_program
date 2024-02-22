@@ -15,8 +15,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
+    <None Include="..\STL_map\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\STL_map\fw_bp.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\STL_map\heuristic.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\STL_map\Image.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

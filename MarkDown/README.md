@@ -37,7 +37,7 @@ int main() {
 }
 ```  
 
-![Image]( fw_bp.gif)
+![Image](fw_bp.gif "神经网络示意图")
 
 ![图片](heuristic.png)
 
