@@ -7,8 +7,8 @@ using namespace std;
 myString::myString() {
 	_str = new char[1];
 	*_str = '\0';
-	_length = 1;
-	std::cout << "myString constructor" << std::endl;
+	_length = 0;
+	std::cout <<this<< " myString constructor" << std::endl;
 }
 
 myString::myString(const char* p) {
@@ -22,20 +22,20 @@ myString::myString(const char* p) {
 		_str = new char[len + 1];
 		strcpy(_str, p);
 	}
-	_length = len + 1;
+	_length = len;
 
-	std::cout << "myString constructor with parameter" << std::endl;
+	std::cout << this<<" myString constructor with parameter" << std::endl;
 }
 
 myString::myString(const myString& m) {
-	_str = new char[m._length];
+	_str = new char[m._length+1];
 	strcpy(_str, m._str); 
 	_length = m._length;
-	std::cout << "copy constructor" << std::endl;
+	std::cout << this<<" copy constructor" << std::endl;
 
 }
 myString::~myString() {
-	std::cout << "myString deconstructor" << std::endl;
+	std::cout << this<<" myString deconstructor" << std::endl;
 	delete[]_str;
 }
 
@@ -47,28 +47,32 @@ void myString::print() {
 	std::cout << _str << std::endl;
 }
 
-myString& myString::operator=(const myString& m) {
+const myString& myString::operator=(const myString& m) {
+	if (this == &m)
+		return *this;
 	_length = m._length;
-	_str = new char[_length];
+	delete []_str;
+	_str = new char[_length+1];
 	strcpy(_str, m._str);
 	return *this;
 }
 
-myString& myString::operator=(const char* ps) {
-	int len = strlen(ps) + 1;
-	delete _str;
-	_str = new char[len];
+const myString& myString::operator=(const char* ps) {
+	int len = strlen(ps);
+	delete []_str;
+	_length = len;
+	_str = new char[len+1];
 	strcpy(_str, ps);
 	return *this;
 }
 
 myString myString::operator+(const myString& m) {
 	myString ms;
-	int len = this->_length + m._length - 1;
+	int len = this->_length + m._length;
 	ms._length = len;
-	ms._str = new char[len];
+	ms._str = new char[len+1];
 	strcpy(ms._str, this->_str);
-	strcpy(ms._str + this->_length - 1, m._str);
+	strcpy(ms._str + this->_length, m._str);
 	return ms;
 }
 

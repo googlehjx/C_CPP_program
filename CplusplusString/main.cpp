@@ -3,29 +3,31 @@
 #include "myString.h"
 
 using namespace std;
+
+myString func(myString &a /* myString a */) {
+	// 实参传递尽量时，调用拷贝构造函数；若形参为引用，则不要调用构造函数来生成临时对象，
+	// 但返回对象的话，还需要调用拷贝构造函数
+	return a;
+}
 int main() {
-#if 0
+
 	myString ms;   // default constructor
 	//cout << ms.LenOfString()<<endl;
 	myString ms1("china"); // constructor with parameter
 	//cout << ms1.LenOfString() << endl;
 	myString ms2(ms1);   // copy constructor
-
 	cout << "===============" << endl;
-	ms = ms1;
-	ms.print();
-
-
+	ms = ms1;  // 调用赋值运算符重载函数
+	cout << ms << endl;
 	cout<<"==============="<<endl;
 
-	ms = ms1 + ms2;
-	ms.print();
-	ms1.print();
+	// ms = ms1 + ms2;  // 1. 调用加号运算符重载，并返回临时对象； 2. 调用赋值运算符重载，并返回引用
+	ms.operator=(ms1.operator+(ms2));
 	cout << ms << endl;
-#endif
-	myString ms;
-	cin >> ms;
-	cout << ms;
 
+	ms = "hello china";
+	cout << ms << endl;
+
+	func(ms);
 	return 0;
 }
