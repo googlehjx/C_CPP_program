@@ -68,9 +68,10 @@ const myString& myString::operator=(const char* ps) {
 
 myString myString::operator+(const myString& m) {
 	myString ms;
+	delete[]ms._str; // 创建临时变量，默认无参构造函数会分配一个字节，内容是"\0";需要删除
 	int len = this->_length + m._length;
 	ms._length = len;
-	ms._str = new char[len+1];
+	ms._str = new char[len + 1]; // 字符指针指向新分配的空间，大小保证能容下两个字符串的内容
 	strcpy(ms._str, this->_str);
 	strcpy(ms._str + this->_length, m._str);
 	return ms;

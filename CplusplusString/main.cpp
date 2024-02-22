@@ -33,7 +33,7 @@ myString func1(myString& a /* myString a */) {
 
 */
 
-int main() {
+int main3() {
 
 	myString ms("china");
 	//func(ms);
@@ -45,7 +45,7 @@ int main() {
 
 
 
-int main2() {
+int main() {
 
 	myString ms;   // default constructor
 	//cout << ms.LenOfString()<<endl;
