@@ -15,8 +15,20 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
+    <Image Include="fw_bp.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="heuristic.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Image.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="基本语法.md" />
   </ItemGroup>
 </Project>
