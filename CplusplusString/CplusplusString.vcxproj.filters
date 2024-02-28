@@ -31,6 +31,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="文本.txt" />
+    <Text Include="文本.md" />
   </ItemGroup>
 </Project>

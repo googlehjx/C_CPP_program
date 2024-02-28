@@ -1,8 +1,28 @@
 #include <iostream>
 #include <cstring>
 #include "myString.h"
-
+#include <string>
+#include <stdio.h>
 using namespace std;
+void print_hex(const char* buffer, int len) {
+	int i;
+	printf("******************start code**********************************\n");
+	for (i = 0; i < strlen(buffer); i++) {
+		printf("0x%02X ", (unsigned char)buffer[i]);
+	}
+	printf("\n");
+	printf("********************end code************************************\n");
+}
+
+int main() {
+
+	string s;
+	s = R"(这)";  // Windows的code page: 936 也及时GBK编码，那么“这”的编码为0Xe2d5，占16bit，2个字节
+	cout << s << endl;
+	cout << s.size() << endl;
+	print_hex(s.c_str(), strlen(s.c_str()));
+	return 0;
+}
 
 myString& func(myString &a /* myString a */) {
 	// 实参传递尽量时，调用拷贝构造函数；若形参为引用，则不要调用构造函数来生成临时对象，
@@ -45,7 +65,7 @@ int main3() {
 
 
 
-int main() {
+int main2() {
 
 	myString ms;   // default constructor
 	//cout << ms.LenOfString()<<endl;
