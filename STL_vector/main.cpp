@@ -1,9 +1,14 @@
 #include <iostream>
 #include <vector>
+#include <array>
 
 
 using namespace std;
 int main() {
+
+	const int SIZE = 5;
+	vector<int> v(SIZE);
+	array<int, SIZE> arr;
 	cout << "Enter an int: " << endl;
 	int number;
 	cin >> number;
