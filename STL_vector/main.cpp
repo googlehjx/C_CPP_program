@@ -4,7 +4,30 @@
 
 using namespace std;
 int main() {
-
+	cout << "Enter an int: " << endl;
+	int number;
+	cin >> number;
+	int* pA = new int[number];
+	for (int i = 0; i < number; i++) {
+		int tmp;
+		cin >> tmp;
+		*(pA + i) = tmp;
+	}
+	for (int i = 0; i < number; i++) {
+		cout << *(pA + i) << " ";
+	}
+	cout << endl;
+	delete [] pA;
+	cout << "========================" << endl;
+	vector<int> vc_int(3);
+	vc_int[0] = 11;
+	vc_int[1] = 22;
+	vc_int[2] = 33;
+	for (auto i : vc_int) {
+		cout << i << " ";
+	}
+	cout << endl;
+	cout << "=====================================" << endl;
 	vector<int> vi;
 	cout << "vi.size() = " << vi.size() << endl;
 	cout << "vi.capacity() = " << vi.capacity() << endl;
