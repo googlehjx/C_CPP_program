@@ -17,7 +17,7 @@ void print_hex(const char* buffer, int len) {
 int main() {
 
 	string s;
-	s = R"(这)";  // Windows的code page: 936 也及时GBK编码，那么“这”的编码为0Xe2d5，占16bit，2个字节
+	s = R"&(这)&";  // Windows的code page: 936 也及时GBK编码，那么“这”的编码为0Xe2d5，占16bit，2个字节
 	cout << s << endl;
 	cout << s.size() << endl;
 	print_hex(s.c_str(), strlen(s.c_str()));
