@@ -6,11 +6,14 @@ void fun() {
 }
 typedef struct dataNode {
 	int score;
-	const char* name;
+	char* name;
 }Node;
 int main() {
 
-	Node n = { 90, "bob" };
+	Node n;
+	n.score = 99;
+	n.name = new char[30];
+	strcpy_s(n.name, 30, "bob");
 	Node n2 = n;
 	cout << (int*)n.name << endl;
 	cout << (int*)n2.name << endl;
