@@ -1,6 +1,13 @@
 #include<iostream>
 #include <string>
 using namespace std;
+
+void count(int n) {
+	cout << "Counting Downing ... " << n << " (n at "<< &n <<")" << endl;
+	if (n > 0)
+		count(n - 1);
+	cout << 0 << " : Kaboom!" << " (n at " << &n << ")" << endl;
+}
 void fun() {
 	cout << "fun()" << endl;
 }
@@ -9,6 +16,7 @@ typedef struct dataNode {
 	char* name;
 }Node;
 int main() {
+	count(4);
 
 	// 结构可以赋值、作为函数参数和函数返回值
 	Node n;
