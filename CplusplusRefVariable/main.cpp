@@ -2,8 +2,28 @@
 #include <string>
 using namespace std;
 
+typedef struct DataNode {
+	string name;
+	float score;
+}Node;
+
+void foo(const Node* p) {
+	cout << p->name << endl;
+	cout << p->score << endl;
+}
+
+void func(const Node& d) {
+	cout << d.name << endl;
+	cout << d.score << endl;
+}
 
 int main() {
+
+	Node n = { "Bob", 90 };
+	func(n);
+	Node m = { "Alex", 99 };
+	foo(&m);
+	cout << " ====================== " << endl;
 	int a = 10;
 	int& ra = a;
 	int* pa = &a;
