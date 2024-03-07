@@ -60,7 +60,7 @@ void Stock::update(double price) {
 	share_val = price;
 	set_tot();
 }
-void Stock::show() {
+void Stock::show() const{
 	cout << " Company name : " << name << endl;
 	cout << " Stock price : " << share_val << endl;
 	cout << " Stock number: " << shares << endl;

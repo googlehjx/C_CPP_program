@@ -1,6 +1,7 @@
 #include <iostream>
 #include "stock10.h"
-
+using std::cout;
+using std::endl;
 int main() {
 	Stock s1;
 	s1.show();
@@ -10,4 +11,7 @@ int main() {
 	s3.show();
 	s3 = s2;
 	s3.show();
+	cout << " =============================== " << endl;
+	const Stock cs;
+	cs.show();
 }
