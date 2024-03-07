@@ -1,4 +1,8 @@
 #include <iostream>
+
+namespace {
+	int count = 100;
+}
 namespace Jill {
 	int count = 9;
 	int number;
