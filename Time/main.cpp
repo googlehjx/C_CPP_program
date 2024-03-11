@@ -4,6 +4,7 @@
 int main() {
 	using std::cout;
 	using std::endl;
+	using std::cin;
 	Time t1(23, 34);
 	Time t2(3, 45);
 	Time ts = t1+t2;
@@ -21,6 +22,11 @@ int main() {
 	tmul.Show();
 	Time tmul2 = 3.4 * t1;
 	tmul2.Show();
+	cout << "输入/输出运算符重载" << endl;
+	cout << tmul2;
+	Time tmp;
+	cin>> tmp;
+	cout<< tmp;
 
 
 }

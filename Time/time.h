@@ -1,5 +1,7 @@
 #pragma once
-
+#include <iostream>
+using std::ostream;
+using std::istream;
 class Time {
 private:
 	int hour;
@@ -15,5 +17,7 @@ public:
 	Time operator+(const Time& t)const;
 	Time operator*(double alpha)const;
 	friend Time operator*(double alpha, const Time& t);
+	friend ostream& operator<<(ostream &os, const Time& t);
+	friend istream& operator>>(istream& is, Time& t);
 	void Show()const;
 };

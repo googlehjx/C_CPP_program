@@ -61,6 +61,17 @@ Time Time::operator*(double alpha) const{
 Time operator*(double alpha, const Time& t) {
 	return t * alpha;
 }
+ostream& operator<<(ostream& os, const Time& t) {
+	os << "Hour = " << t.hour << " " << " Minute = " << t.minute << std::endl;
+	return os;
+}
+istream& operator>>(istream& is, Time& t) {
+	std::cout << "input hour: ";
+	is >> t.hour;
+	std::cout << "input minute: ";
+	is >> t.minute;
+	return is;
+}
 void Time::Show()const {
 	std::cout << "Hour = " << hour << std::endl;
 	std::cout << "Minute = " << minute << std::endl;
