@@ -76,3 +76,6 @@ void Time::Show()const {
 	std::cout << "Hour = " << hour << std::endl;
 	std::cout << "Minute = " << minute << std::endl;
 }
+Time::operator double()const {
+	return hour * 60 + minute;
+}

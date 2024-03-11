@@ -27,6 +27,8 @@ int main() {
 	Time tmp;
 	cin>> tmp;
 	cout<< tmp;
+	// ×ª»»º¯Êý
+	cout << double(tmp) << endl;
 
 
 }

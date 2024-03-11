@@ -20,4 +20,5 @@ public:
 	friend ostream& operator<<(ostream &os, const Time& t);
 	friend istream& operator>>(istream& is, Time& t);
 	void Show()const;
+	operator double() const; // ×ª»»º¯Êý
 };
