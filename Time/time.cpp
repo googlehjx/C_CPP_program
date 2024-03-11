@@ -35,6 +35,16 @@ Time Time::Sum(const Time& t)const {
 	tm.hour = tm.hour % 24;
 	return tm;
 }
+
+Time Time::operator+(const Time& t)const {
+	Time tm;
+	tm.hour = hour + t.hour;
+	tm.minute = minute + t.minute;
+	tm.hour = tm.hour + tm.minute / 60;
+	tm.minute = tm.minute % 60;
+	tm.hour = tm.hour % 24;
+	return tm;
+}
 void Time::Show()const {
 	std::cout << "Hour = " << hour << std::endl;
 	std::cout << "Minute = " << minute << std::endl;

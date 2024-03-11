@@ -6,7 +6,7 @@ int main() {
 	using std::endl;
 	Time t1(23, 34);
 	Time t2(3, 45);
-	Time ts = t1.Sum(t2);
+	Time ts = t1+t2;
 	t1.Show();
 	t2.Show();
 	ts.Show();
