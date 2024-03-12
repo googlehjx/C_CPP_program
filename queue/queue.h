@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+using std::cout;
+using std::endl;
 typedef int Item;
 typedef struct MyStruct
 {
@@ -12,6 +15,7 @@ private:
 	int qs;          // 最大队列长度
 	int length;       // 目前排队人数
 	PERSON* head;    // 队列头部
+	void deleteItem(PERSON* p);
 public:
 	Queue(int qs = Q_SIZE);
 	~Queue();
@@ -20,5 +24,6 @@ public:
 	int queuecount()const;
 	bool enqueue(const Item& item);
 	bool dequeue(Item& item);
+	void show()const;
 
 };
