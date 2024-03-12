@@ -18,5 +18,6 @@ int main() {
 		qn.show();
 	}
 	cout << "end" << endl;
+
 	return 0;
 }
