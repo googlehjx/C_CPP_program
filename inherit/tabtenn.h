@@ -1,6 +1,16 @@
 #pragma once
 #include <string>
 using std::string;
+
+class Paddle {
+public:
+	Paddle(string n) {
+		name = n;
+	}
+private:
+	string name;
+};
+
 class TableTennisPlayer {
 private:
 	string firstname;
@@ -18,11 +28,12 @@ public:
 
 class RelatedPlayer: public TableTennisPlayer {
 public:
-	RelatedPlayer(unsigned int r = 0, const string& fn="", const string& ln = "", bool bt = false);
-	RelatedPlayer(unsigned int r, const TableTennisPlayer& t);
+	RelatedPlayer(unsigned int r = 0, const string p = "", const string& fn = "", const string& ln = "", bool bt = false);
+	RelatedPlayer(unsigned int r, const string p, const TableTennisPlayer& t);
 	unsigned int Rating()const { return rating; }
 	void ResetRating(unsigned int r) { rating = r; }
 	virtual void info()const; 
 private:
 	unsigned int rating;
+	Paddle pd;
 };

@@ -26,13 +26,13 @@ void TableTennisPlayer::info() const {
 		std::cout << " doesn't have a table." << std::endl;
 	}
 }
-RelatedPlayer::RelatedPlayer(unsigned int r, const string& fn,
-	const string& ln, bool bt): TableTennisPlayer(fn, ln, bt) {
+RelatedPlayer::RelatedPlayer(unsigned int r, const string p, const string& fn,
+	const string& ln, bool bt): TableTennisPlayer(fn, ln, bt), pd(p) {
 	
 	rating = r;
 }
-RelatedPlayer::RelatedPlayer(unsigned int r, const TableTennisPlayer& t):
-	TableTennisPlayer(t){
+RelatedPlayer::RelatedPlayer(unsigned int r, const string p, const TableTennisPlayer& t):
+	TableTennisPlayer(t), pd(p){
 	
 	rating = r;
 }

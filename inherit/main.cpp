@@ -6,8 +6,8 @@ int main(int argc, char* argv[]) {
 	using std::cout;
 	using std::endl;
 	TableTennisPlayer tp = { "Jim", "Green", true };
-	RelatedPlayer rp = { 99, "Bob", "Delun", false };
-	RelatedPlayer frp = { 100,rp };
+	RelatedPlayer rp = { 99, "double happy", "Bob", "Delun", false };
+	RelatedPlayer frp = { 100,"double fish", rp};
 	tp.name();
 	cout << endl;
 	rp.name();
