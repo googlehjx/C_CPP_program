@@ -10,6 +10,7 @@ public:
 	myStudent();
 	myStudent(string n, valarray<double> s);
 	friend ostream& operator<<(ostream &oi, const myStudent& m);
+	void setInfo(const string n, valarray<double> s);
 private:
 	std::string name;
 	valarray<double> scores;
@@ -26,4 +27,9 @@ ostream& operator<<(ostream &oi, const myStudent& m) {
 		oi << d << " ";
 	}
 	return oi;
+}
+
+void myStudent::setInfo(const string n, valarray<double> s) {
+	name = n;
+	scores = s;
 }
