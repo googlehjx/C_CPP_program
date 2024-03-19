@@ -8,7 +8,7 @@ using std::endl;
 class myStudent {
 private:
 	string name;
-	valarray<double> scores(4);
+	valarray<double> scores;
 };
 int main() {
 
