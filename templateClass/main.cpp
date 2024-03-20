@@ -17,18 +17,16 @@ int main() {
 	s_int.show();
 	cout << "a = " << a << " b = " << b << endl;
 
-	/*valarray<double>s{ 99, 87 };
+	valarray<double>s{ 99, 87 };
 	myStudent ms;
 	myStudent msa{ "jack",  s};
 	cout << "=======================" << endl;
 	cout << ms << endl;
 	cout << msa << endl;
-	double tm;
-	cin >> tm;
+
 	valarray<double> tmpa(2);
-	tmpa[0] = tm;
-	cin >> tm;
-	tmpa[1] = tm;
+	tmpa[0] = 99.1;
+	tmpa[1] = 99.8;
 	myStudent msp("hejinxin", tmpa);
 	cout << "========================" << endl;
 	cout << msp << endl;
@@ -36,6 +34,6 @@ int main() {
 	mst.Push(ms);
 	mst.Push(msa);
 	mst.Push(msp);
-	mst.show();*/
+	mst.show();
 
 }

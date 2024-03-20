@@ -1,5 +1,5 @@
 #include "stack.h"
-
+#include "student.h"
 template<typename T>
 bool myStack<T>::Push(T& t) {
 	if (!isFull()) {
@@ -38,5 +38,6 @@ void myStack<T>::show()const {
 
 // 如果将类模板声明和定义分开，那必须在实现的地方显式实例化
 // 显式实例化，明确告知编译器，由类模板myStack，生成两个实例: myStack<int和,myStack<double>
-//template class myStack<int> ;  
-//template class myStack<double>;
+template class myStack<int> ;  
+template class myStack<double>;
+template class myStack<myStudent>;
