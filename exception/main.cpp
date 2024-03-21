@@ -1,4 +1,5 @@
 #include <iostream>
+#include "bad_hmean.h"
 int hmean(int a, int b);
 int main() {
 	int result;
@@ -10,8 +11,8 @@ int main() {
 		try {
 			result = hmean(a, b);
 		}
-		catch (const char* s) {
-			std::cout << s << std::endl;
+		catch (bad_hmean& hm) {
+			hm.message();
 			continue;
 		}
 		std::cout << "The hmean of " << a << " " << b << " is " << result << std::endl;
@@ -23,7 +24,7 @@ int main() {
 
 int hmean(int a, int b) {
 	if (a == -b) {
-		throw "Bad parameters a == -b ";
+		throw bad_hmean(a,b);
 	}
 	else {
 		return 2 * a * b / (a + b);
