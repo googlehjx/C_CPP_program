@@ -12,6 +12,7 @@ int main() {
 			result = hmean(a, b);
 		}
 		catch (bad_hmean& hm) {
+			std::cout << __FILE__ << " : " << __LINE__ << endl;
 			hm.message();
 			continue;
 		}
