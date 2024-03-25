@@ -23,7 +23,7 @@ int main() {
 		string s("unique_ptr");
 		std::unique_ptr<Report> upd(new Report(s));
 	}
-	cout << "=========================" << endl;
+	cout << "===========================" << endl;
 	{
 		std::shared_ptr<Report> spd(new Report("shared_ptr"));
 	}

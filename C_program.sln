@@ -131,6 +131,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "16", "16", "{BCADE004-9B7D-
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntelligentPointer", "IntelligentPointer\IntelligentPointer.vcxproj", "{8A480273-805E-4F59-8CE1-43548D78EB0D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "genericProgramming", "genericProgramming\genericProgramming.vcxproj", "{D0653911-F7D0-40A7-8983-4E1BCE906E3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -563,6 +565,14 @@ Global
 		{8A480273-805E-4F59-8CE1-43548D78EB0D}.Release|x64.Build.0 = Release|x64
 		{8A480273-805E-4F59-8CE1-43548D78EB0D}.Release|x86.ActiveCfg = Release|Win32
 		{8A480273-805E-4F59-8CE1-43548D78EB0D}.Release|x86.Build.0 = Release|Win32
+		{D0653911-F7D0-40A7-8983-4E1BCE906E3F}.Debug|x64.ActiveCfg = Debug|x64
+		{D0653911-F7D0-40A7-8983-4E1BCE906E3F}.Debug|x64.Build.0 = Debug|x64
+		{D0653911-F7D0-40A7-8983-4E1BCE906E3F}.Debug|x86.ActiveCfg = Debug|Win32
+		{D0653911-F7D0-40A7-8983-4E1BCE906E3F}.Debug|x86.Build.0 = Debug|Win32
+		{D0653911-F7D0-40A7-8983-4E1BCE906E3F}.Release|x64.ActiveCfg = Release|x64
+		{D0653911-F7D0-40A7-8983-4E1BCE906E3F}.Release|x64.Build.0 = Release|x64
+		{D0653911-F7D0-40A7-8983-4E1BCE906E3F}.Release|x86.ActiveCfg = Release|Win32
+		{D0653911-F7D0-40A7-8983-4E1BCE906E3F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -582,6 +592,7 @@ Global
 		{2707C228-3EB6-4599-85A9-7CD865F7F705} = {10E65593-19FB-4955-933B-1F39CAE001F5}
 		{FDFEFBB4-5CF2-483F-8246-D455BCB17C87} = {C85E74B9-5C6B-4A64-912F-1BC3C9E27558}
 		{8A480273-805E-4F59-8CE1-43548D78EB0D} = {BCADE004-9B7D-4CFE-83DD-DD7111236F71}
+		{D0653911-F7D0-40A7-8983-4E1BCE906E3F} = {BCADE004-9B7D-4CFE-83DD-DD7111236F71}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {803FD46A-7F42-43A0-BE55-047738EC74BF}
