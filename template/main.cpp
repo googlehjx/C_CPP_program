@@ -7,6 +7,12 @@ void Swap(T& a, T& b) {
 	a = b;
 	b = tmp;
 }
+// 函数模板重载
+
+template<typename T1, typename T2>
+void Swap(T1& a, T2& b) {
+	cout << "Swap<typename T1, typename T2>" << endl;
+}
 
 int main() {
 	int a = 1, b = 2;
@@ -15,5 +21,7 @@ int main() {
 	cout << "a = " << a << " b = " << b << endl;
 	Swap<long>(c, d);  // 提示编译器实例化模板函数，生产 Swap（long, long)
 	cout << "c = " << c << " d = " << d << endl;
+
+	Swap<int, long>(a, c);
 }
 
