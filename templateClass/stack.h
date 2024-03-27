@@ -7,6 +7,7 @@ class myStack {
 
 public:
 	myStack() { num = 0; };
+	myStack(const myStack<T>& ts);
 	bool isEmpty()const { return num == 0; }
 	bool isFull()const { return num == MaxLen; }
 	bool Push(T& t);

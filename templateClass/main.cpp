@@ -12,6 +12,9 @@ int main() {
 	s_int.Push(a);
 	s_int.Push(b);
 	s_int.show();
+	myStack<int> s_int2(s_int);
+	cout << " invoke copy constructor" << endl;
+	s_int2.show();
 	s_int.Pop(a);
 	s_int.Pop(b);
 	s_int.show();
