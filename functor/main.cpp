@@ -4,6 +4,8 @@
 using namespace std;
 
 
+// 仿函数，本质是定义一个类模板，实例化后生产一个对象，表现出函数的特性
+// 接受实参，运行，返回结果
 template<typename T>
 class stringPrint {
 public:
